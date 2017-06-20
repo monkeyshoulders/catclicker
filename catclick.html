@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="catclick.css">
+  <script type="catclick.js"></script>
+  <title>Cat Clicker</title>
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>Cat Clicker</h1>
+    <p>Click your favorite picture</p>
+  </div>
+  <div class="img">
+    <img src="images/siam.jpg" alt="cat" id="siam">
+
+    <div class="counter1">
+      <p id="counter1"></p>
+      <script type="text/javascript">
+        var addUp1 = (function() {
+          var count1 = 0;
+
+          return function() {
+            var element1 = document.getElementById("counter1");
+            if (element1) element1.innerHTML = 'Counter: ' + ++count1;
+          }
+        }());
+
+        // Attach as a listener
+        siam.addEventListener("click", addUp1, false);
+      </script>
+    </div>
+  </div>
+  <div class="img">
+    <img src="images/moose.jpg" alt="cat" id="moose">
+
+    <div class="counter2">
+      <p id="counter2"></p>
+      <script type="text/javascript">
+        var addUp2 = (function() {
+          var count2 = 0;
+
+          return function() {
+            var element2 = document.getElementById("counter2");
+            if (element2) element2.innerHTML = 'Counter: ' + ++count2;
+          }
+        }());
+
+        // Attach as a listener
+        moose.addEventListener("click", addUp2, false);
+      </script>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
