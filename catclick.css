@@ -1,19 +1,16 @@
 
-.img {
-  margin-left: 38%;
-}
 
-#caption {
+ul {
 
-}
-
-#counter {
-  margin-left: 33%;
+  list-style-type: none;
+  font-size: 1.8em;
 
 }
 
-.title {
-  margin-left: 43%;
-  font-size: 20px;
+.content {
+  margin-top: 2em;
+}
 
+.admin {
+  margin-left: 1em;
 }

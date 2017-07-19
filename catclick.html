@@ -1,61 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="catclick.css">
-  <script type="catclick.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <title>Cat Clicker</title>
 </head>
 
 <body>
 
-  <div class="title">
+  <div class="title container-fluid text-center">
     <h1>Cat Clicker</h1>
-    <p>Click your favorite picture</p>
+    <h4>Pick a Kitty</h4>
   </div>
-  <div class="img">
-    <img src="images/siam.jpg" alt="cat" id="siam">
-
-    <div class="counter1">
-      <p id="counter1"></p>
-      <script type="text/javascript">
-        var addUp1 = (function() {
-          var count1 = 0;
-
-          return function() {
-            var element1 = document.getElementById("counter1");
-            if (element1) element1.innerHTML = 'Counter: ' + ++count1;
-          }
-        }());
-
-        // Attach as a listener
-        siam.addEventListener("click", addUp1, false);
-      </script>
-    </div>
+  <div class="row content">
+    <div class="col-md-3"></div>
+    <div><ul id="cat-list" class="text-center col-md-3"></ul></div>
+  <div id="cat" class="text-center col-md-3">
+    <h2 id="cat-name" class="text-center"></h2>
+    <div id="cat-count" class="text-center"></div>
+    <img id="cat-img" class="text-center" src="" alt="">
   </div>
-  <div class="img">
-    <img src="images/moose.jpg" alt="cat" id="moose">
-
-    <div class="counter2">
-      <p id="counter2"></p>
-      <script type="text/javascript">
-        var addUp2 = (function() {
-          var count2 = 0;
-
-          return function() {
-            var element2 = document.getElementById("counter2");
-            if (element2) element2.innerHTML = 'Counter: ' + ++count2;
-          }
-        }());
-
-        // Attach as a listener
-        moose.addEventListener("click", addUp2, false);
-      </script>
-    </div>
+  <div class="col-md-3"></div>
   </div>
 
+    <div id="adminArea">
+    <button id="adminButton" type="button" class="btn btn-info btn-md">Admin</button>
+  <div id="adminDetails"></div>
+</div>
+
+  <script src="js/controller.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
 
 </body>
 
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+</head>
+<body>
+    <ul id="cat-list"></ul>
+    <div id="cat">
+        <h2 id="cat-name"></h2>
+        <div id="cat-count"></div>
+        <img id="cat-img" src="" alt="cute cat">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
